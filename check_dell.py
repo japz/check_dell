@@ -177,7 +177,7 @@ def do_virtdisk(controller="0"):
         status = 0                    
         info = []                     
         for vdisk in vdisks:          
-                if vdisk.status != 2: 
+                if vdisk.status != "2": 
                         if status < 1:
                                 status = 1
                         if vdisk.status == "4":
@@ -209,7 +209,7 @@ def do_power():
         status = 0        
         powersupplies = power[1]
         info = []               
-        if power[0][1] != "2":  
+        if power[0][0] != "2":  
                 status = 1      
         for powersupply in powersupplies:
                 infostring = []          
